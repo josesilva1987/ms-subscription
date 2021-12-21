@@ -10,8 +10,7 @@ const dataTestFim = new Date("2021-12-31");
 @Controller('subscription')
 @ApiTags('Subscription')
 export class SubscriptionController {
-  constructor(private subscriptionService: SubscriptionService){
-        
+  constructor(private subscriptionService: SubscriptionService){ 
   }
 
   @Get()

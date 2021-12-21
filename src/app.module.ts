@@ -1,9 +1,9 @@
 /* eslint-disable prettier/prettier */
 import { Module } from '@nestjs/common';
 import { SequelizeModule } from '@nestjs/sequelize';
-import { Subscription } from './api/subscription/dto/subscription.dto';
-import { SubscriptionController } from './api/subscription/subscription.controller';
-import { SubscriptionService } from './api/subscription/subscription.service';
+import { Subscription } from './api/modules/subscription/dto/subscription.dto';
+import { SubscriptionController } from './api/modules/subscription/subscription.controller';
+import { SubscriptionService } from './api/modules/subscription/subscription.service';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 
