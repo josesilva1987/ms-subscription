@@ -58,4 +58,11 @@ export class Subscription extends Model<Subscription> {
     allowNull: false,
   })
   numInstallments: number;
+
+  @ApiProperty({ description: 'active', example: 'true' })
+  @Column({
+    type: DataType.BOOLEAN,
+    allowNull: false,
+  })
+  active: boolean;
 }

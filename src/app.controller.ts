@@ -1,14 +1,17 @@
 import { Controller, Get } from '@nestjs/common';
-import { ApiTags } from '@nestjs/swagger';
+import { ApiOperation, ApiResponse, ApiTags } from '@nestjs/swagger';
 import { AppService } from './app.service';
 
 @Controller()
-@ApiTags('Todos')
+@ApiTags('All')
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
-  @Get()
-  getHello(): string {
-    return this.appService.getHello();
+  @Get('/running')
+  @ApiOperation({ summary: 'Created billings of the subscription' })
+  @ApiResponse({ status: 200, description: 'Task executed with success' })
+  @ApiResponse({ status: 400, description: 'Invalid Parameters' })
+  getVersion(): string {
+    return `RUNNING VERSION ${process.env.VERSION}`;
   }
 }

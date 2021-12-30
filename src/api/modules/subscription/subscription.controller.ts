@@ -4,14 +4,11 @@ import { Body, Controller, Delete, Get, Param, Post, Put } from '@nestjs/common'
 import { ApiBody, ApiOperation, ApiParam, ApiResponse, ApiTags } from '@nestjs/swagger';
 import { Subscription } from './dto/subscription.dto';
 import { SubscriptionService } from './subscription.service';
-const dataTest = new Date("2021-01-01");
-const dataTestFim = new Date("2021-12-31");
 
 @Controller('subscription')
 @ApiTags('Subscription')
 export class SubscriptionController {
-  constructor(private subscriptionService: SubscriptionService){ 
-  }
+  constructor(private subscriptionService: SubscriptionService) {}
 
   @Get()
   @ApiOperation({ summary: 'List all subscriptisons' })
